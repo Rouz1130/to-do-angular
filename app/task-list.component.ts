@@ -14,8 +14,7 @@ import { EditTaskDetailsComponent } from './edit-task-details.component';
     [class.selected]="currentTask === selectedTask"
     [task]="currentTask">
   </task-display>
-  <edit-task-details [task]="selectedTask">
-  </edit-task-details>
+  <edit-task-details *ngIf="selectedTask" [task]="selectedTask"></edit-task-details>
   `
 })
 export class TaskListComponent {
